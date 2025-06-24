@@ -1,0 +1,718 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿狼包装设计中心 - 极简包装设计专家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#333333',
+                        secondary: '#666666',
+                        accent: '#4A90E2',
+                        neutral: '#F5F5F5',
+                        light: '#FFFFFF',
+                        dark: '#1A1A1A'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .animate-fade-in {
+                animation: fadeIn 0.8s ease-in-out forwards;
+            }
+            .animate-slide-up {
+                animation: slideUp 0.8s ease-out forwards;
+            }
+            .grid-masonry {
+                grid-template-rows: masonry;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-inter bg-light text-primary antialiased">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight">阿狼包装设计</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#work" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">作品</a>
+                <a href="#services" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">业务</a>
+                <a href="#training" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">培训</a>
+                <a href="#recruitment" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">招聘</a>
+                <a href="#contact" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">联系</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full border-t border-gray-100 py-4 animate-fade-in">
+            <div class="container mx-auto px-6 flex flex-col space-y-4">
+                <a href="#work" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">作品</a>
+                <a href="#services" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">业务</a>
+                <a href="#training" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">培训</a>
+                <a href="#recruitment" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">招聘</a>
+                <a href="#contact" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">联系</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区 -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 py-24 md:py-0">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-light leading-tight mb-8 animate-fade-in opacity-0" style="animation-delay: 0.2s">
+                    极简包装 <span class="font-medium">创意无限</span>
+                </h1>
+                <p class="text-[clamp(1rem,3vw,1.25rem)] text-secondary max-w-2xl mx-auto mb-12 text-balance animate-fade-in opacity-0" style="animation-delay: 0.4s">
+                    专注于包装袋原创设计、包装插画与产品视觉呈现，为您的品牌提供高品质包装解决方案
+                </p>
+                <a href="#work" class="inline-block border-2 border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 animate-fade-in opacity-0" style="animation-delay: 0.6s">查看作品</a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#work" class="text-primary">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="work" class="py-24 bg-neutral">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-4">精选作品</h2>
+                <p class="text-secondary max-w-2xl mx-auto">我们的包装设计作品，融合创意与实用，为品牌创造独特视觉体验</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 作品1 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up">
+                    <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/fe64b1a30650422b8b5e99b6c3454229~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1751339593&amp;x-signature=h6V0ZYg72eUlqLEXedFXXVBFpV0%3D" alt="食品包装设计" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">瓶贴设计</h3>
+                            <p class="text-white/80 text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品2 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/be4b9987d3de4ceda552959f781b053a~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1751338831&amp;x-signature=OehspTVcy0iUsQIS%2BPFVvz0cg0g%3D" alt="化妆品包装设计" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">标志设计</h3>
+                            <p class="text-white/80 text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品3 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/810f6bda65194bf498854ae0bebd4e9f~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1751339823&amp;x-signature=dYC6jTgn%2BvJc%2BTUgb8fr6wVvLRQ%3D" alt="饮料包装设计" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">图片修复处理</h3>
+                            <p class="text-white/80 text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品4 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up">
+                    <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/2c73d572c2b64b9d9dd9859664ae80db~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1751340607&amp;x-signature=c5p1XABVg2RJzZibfB8Bgp4KM54%3D" alt="电子产品包装设计" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">插画设计</h3>
+                            <p class="text-white/80 text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品5 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/fd5af750be96455a9197146050525e7c~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1751339414&amp;x-signature=yIQNtoqKxnTdHoPytSQlgAwb3TU%3D" alt="酒类包装设计" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">袋子设计</h3>
+                            <p class="text-white/80 text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品6 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/3ff15e54da9d4c6c920dffed5dffb6bd~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1751338973&amp;x-signature=qpWejym5i%2FFVzGKVQ8JOkZAbW6I%3D" alt="食品包装设计" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">零食系列包装</h3>
+                            <p class="text-white/80 text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#" class="inline-block border-2 border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                    查看更多作品
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务内容 -->
+    <section id="services" class="py-24">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-4">核心业务</h2>
+                <p class="text-secondary max-w-2xl mx-auto">我们提供全方位的包装设计服务，从创意设计到生产制作，满足您的各种需求</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- 制作中心 -->
+                <div>
+                    <h3 class="text-2xl font-medium mb-6 flex items-center">
+                        <span class="text-accent text-3xl mr-3"><i class="fa-solid fa-factory"></i></span>
+                        制作中心
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">看样</h4>
+                                <p class="text-secondary text-sm">专业团队对样品进行评估和分析，提供精准的制作建议</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">下雕</h4>
+                                <p class="text-secondary text-sm">高精度雕刻工艺，实现包装设计的细节呈现</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">调图</h4>
+                                <p class="text-secondary text-sm">专业图像处理，确保色彩还原度和视觉效果</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">设计</h4>
+                                <p class="text-secondary text-sm">根据需求提供创意设计方案，打造独特包装形象</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 品牌原创设计 -->
+                <div>
+                    <h3 class="text-2xl font-medium mb-6 flex items-center">
+                        <span class="text-accent text-3xl mr-3"><i class="fa-solid fa-paintbrush"></i></span>
+                        品牌原创设计
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">包装袋原创设计</h4>
+                                <p class="text-secondary text-sm">根据产品特性和品牌定位，设计独特的包装袋</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">包装插画设计</h4>
+                                <p class="text-secondary text-sm">原创插画创作，增强包装的故事性和吸引力</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">产品效果图</h4>
+                                <p class="text-secondary text-sm">逼真的产品渲染图，用于营销和展示</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">标志设计</h4>
+                                <p class="text-secondary text-sm">打造简洁而有记忆点的品牌标志</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent text-xl mr-3 mt-1"><i class="fa-solid fa-check-circle"></i></span>
+                            <div>
+                                <h4 class="font-medium mb-1">产品商标设计</h4>
+                                <p class="text-secondary text-sm">专业的商标设计服务，确保品牌的法律保护</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 设计培训 -->
+    <section id="training" class="py-24 bg-neutral">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-4">阿狼设计培训</h2>
+                <p class="text-secondary max-w-2xl mx-auto">专业包装设计培训，3个月系统学习，毕业后推荐就业</p>
+            </div>
+            
+            <div class="bg-white p-8 md:p-12 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-medium mb-6">阿狼培训课程</h3>
+                        <p class="text-secondary mb-8">面向18岁以上的高中、大学生毕业生，提供专业的包装设计培训。我们的课程注重实践操作，帮助学员快速掌握行业技能。</p>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-medium mb-3">课程内容</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li>• 看样：学习如何评估和分析稿件;</li>
+                                    <li>• 下雕：掌握工艺的要点;</li>
+                                    <li>• 调图：专业图像处理技术，让你还原8k高清图质;</li>
+                                    <li>• 智能设计：利用AI工具辅助设计;</li>
+                                    <li>• 曲线应用转换：色彩结构和软件曲线转换应用，让你事半功倍；</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium mb-3">应用软件</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li>• Photoshop (PS)</li>
+                                    <li>• Illustrator (AI)</li>
+                                    <li>• Midjourney (MJ)</li>
+                                    <li>• CorelDRAW (CDR)</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium mb-3">课程优势</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li>• 3个月线下，面对面课程，密集式学习</li>
+                                    <li>• 一对一指导，确保学习效果</li>
+                                    <li>• 真实项目实践，积累工作经验</li>
+                                    <li>• 毕业后推荐就业，提供就业保障</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="inline-block border-2 border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 mt-8">报名咨询</a>
+                    </div>
+                    
+                    <div class="relative">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/270a0ae7e9984fbcb0a1520b874f0e73~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1751338754&amp;x-signature=F1MF7Twrh%2BQ4UpOvKmCCh1TcntA%3D" alt="设计培训" class="w-full h-[600px] object-cover">
+                        <div class="absolute -bottom-8 -right-8 bg-primary text-white p-8 shadow-xl">
+                            <p class="text-sm text-white/80 mb-2">培训周期</p>
+                            <p class="text-4xl font-bold">3个月</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 招聘业务 -->
+    <section id="recruitment" class="py-24">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-4">招聘与人才储备</h2>
+                <p class="text-secondary max-w-2xl mx-auto">我们欢迎优秀的设计人才加入，同时也为企业提供专业的设计人才推荐服务</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 公司招聘 -->
+                <div class="bg-neutral p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">公司招聘</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-6">
+                        发布您的招聘信息，寻找优秀的包装设计人才。我们拥有专业的设计师资源库，帮助您快速找到合适的候选人。
+                    </p>
+                    <a href="#contact" class="inline-block border border-primary px-6 py-2 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                        发布招聘
+                    </a>
+                </div>
+                
+                <!-- 找工作 -->
+                <div class="bg-neutral p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">找工作</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-6">
+                        上传您的简历，我们将为您推荐适合的包装设计职位。加入我们的人才库，获取更多就业机会。
+                    </p>
+                    <a href="#contact" class="inline-block border border-primary px-6 py-2 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                        上传简历
+                    </a>
+                </div>
+                
+                <!-- 人才储备库 -->
+                <div class="bg-neutral p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">人才储备库</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-6">
+                        我们建立了专业的包装设计人才储备库，为企业提供快速、精准的人才推荐服务。无论您是企业还是设计师，都可以加入我们。
+                    </p>
+                    <a href="#contact" class="inline-block border border-primary px-6 py-2 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                        了解更多
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客户评价 -->
+    <section class="py-24 bg-neutral">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-4">客户评价</h2>
+                <p class="text-secondary max-w-2xl mx-auto">听听我们客户的真实反馈，了解他们对我们服务的评价</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 评价1 -->
+                <div class="bg-white p-8 shadow-md">
+                    <div class="text-accent mb-6">
+                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-secondary italic mb-6 leading-relaxed">
+                        "阿狼包装设计中心为我们品牌设计的系列包装获得了市场的广泛认可，不仅美观大方，而且非常实用。他们的专业团队能够深入理解我们的需求，并提供创新的解决方案。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1005/100/100" alt="客户" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-medium">王总</h4>
+                            <p class="text-secondary text-sm">某知名食品企业 CEO</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 评价2 -->
+                <div class="bg-white p-8 shadow-md">
+                    <div class="text-accent mb-6">
+                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-secondary italic mb-6 leading-relaxed">
+                        "作为一家新兴品牌，我们非常感谢阿狼包装设计中心为我们提供的全方位设计服务。从品牌标志到产品包装，他们都展现了专业的水准和创新的思维，帮助我们在市场中树立了独特的形象。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1006/100/100" alt="客户" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-medium">李小姐</h4>
+                            <p class="text-secondary text-sm">某美妆品牌 创始人</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 评价3 -->
+                <div class="bg-white p-8 shadow-md">
+                    <div class="text-accent mb-6">
+                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-secondary italic mb-6 leading-relaxed">
+                        "阿狼包装设计中心的培训课程非常实用，我的团队参加了他们的包装设计培训后，整体设计水平有了显著提升。老师们不仅专业知识丰富，而且教学方法生动有趣，让学员们能够快速掌握技能。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1012/100/100" alt="客户" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-medium">张总监</h4>
+                            <p class="text-secondary text-sm">某大型企业 设计部总监</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-24 bg-primary text-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-6">联系我们</h2>
+                    <p class="text-white/80 mb-8 leading-relaxed">
+                        无论您是有设计需求，还是对我们的培训课程感兴趣，都可以通过以下方式联系我们。我们期待与您合作！
+                    </p>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">姓名</label>
+                            <input type="text" id="name" class="w-full bg-white/10 border border-white/20 rounded px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="您的姓名">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">邮箱</label>
+                            <input type="email" id="email" class="w-full bg-white/10 border border-white/20 rounded px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="您的邮箱">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium mb-2">电话</label>
+                            <input type="tel" id="phone" class="w-full bg-white/10 border border-white/20 rounded px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="您的电话">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">留言</label>
+                            <textarea id="message" rows="5" class="w-full bg-white/10 border border-white/20 rounded px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="请输入您的留言内容"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-white text-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-300">
+                            发送留言
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-white/5 p-8 h-full">
+                        <h3 class="text-xl font-medium mb-6">联系方式</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-map-marker"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">地址</h4>
+                                    <p class="text-white/80">山西省运城市盐湖区涑水街星河广场7号写字楼3层318号室</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">电话</h4>
+                                    <p class="text-white/80">18703593001</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">邮箱</h4>
+                                    <p class="text-white/80">281845052@qq.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h3 class="text-xl font-medium mb-6">工作时间</h3>
+                            <p class="text-white/80 mb-4">周一至周五: 9:00 - 18:00</p>
+                            <p class="text-white/80">周六至周日: 10:00 - 16:00</p>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h3 class="text-xl font-medium mb-6">关注我们</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
+                                    <i class="fa-brands fa-weixin"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
+                                    <i class="fa-brands fa-weibo"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
+                                    <i class="fa-brands fa-douyin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 bg-primary text-white/80 border-t border-white/10">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-6">阿狼包装设计中心</h3>
+                    <p class="text-sm leading-relaxed mb-6">
+                        专注于包装设计领域，为客户提供高品质的设计服务和解决方案。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/60 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-weixin"></i>
+                        </a>
+                        <a href="#" class="text-white/60 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-weibo"></i>
+                        </a>
+                        <a href="#" class="text-white/60 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white/60 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-douyin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">快速链接</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#work" class="hover:text-accent transition-colors">作品展示</a></li>
+                        <li><a href="#services" class="hover:text-accent transition-colors">业务服务</a></li>
+                        <li><a href="#training" class="hover:text-accent transition-colors">设计培训</a></li>
+                        <li><a href="#recruitment" class="hover:text-accent transition-colors">招聘信息</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">业务服务</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-accent transition-colors">包装袋设计</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">包装插画</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">产品效果图</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">标志设计</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">商标设计</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">联系方式</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-map-marker mr-3 mt-1"></i>
+                            <span>山西省运城市盐湖区涑水街星河广场7号写字楼3层318号室</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-phone mr-3 mt-1"></i>
+                            <span>18703593001</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-envelope mr-3 mt-1"></i>
+                            <span>281845052@qq.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm mb-4 md:mb-0">© 2025 阿狼包装设计中心. 保留所有权利.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="hover:text-accent transition-colors">隐私政策</a>
+                    <a href="#" class="hover:text-accent transition-colors">服务条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+        
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            }
+        });
+        
+        // 点击移动端菜单项后关闭菜单
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 滚动动画
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('[data-aos]');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight * 0.85) {
+                    element.classList.add('animate-fade-in');
+                }
+            });
+        };
+        
+        // 页面加载时初始化动画
+        window.addEventListener('load', animateOnScroll);
+        // 滚动时检查动画
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+
+</body></html>
